@@ -4,8 +4,8 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
 
-      *COPY "fantasy-race.cpy".  *> First copy file examples to use
-      *COPY "player-stats.cpy".  *> Second copy file
+    
+       COPY "player-stats.cpy".  
 
        01  FANTASY-RACE.
            02  chosen-name  PIC X(10).
@@ -19,18 +19,32 @@
 
        PROCEDURE DIVISION.
 
+       0500-GAME-START.
+           PERFORM 0000-CHARACTER-CREATION-START.
+           STOP RUN.
+
        0000-CHARACTER-CREATION-START.
            PERFORM UNTIL END-SWITCH = 'Y' OR END-SWITCH = 'y'
                PERFORM 0100-NAME-CLASS
                PERFORM 0150-PICK-CLASSES
-               DISPLAY chosen-name " it is a pleasure to meet you!"
-               DISPLAY "Always nice to have a " chosen-class " around"
+               DISPLAY "Always nice to have a " YOUR-CLASS
                PERFORM 0175-PICK-FANTASY-RACE
                PERFORM 0200-RESPONSES
-               DISPLAY "YOU CHOSE " YOUR-CLASS
+               PERFORM 0225-HERO-DETAILS
                DISPLAY "Would you like to end? (Y/N) "
                ACCEPT END-SWITCH
            END-PERFORM.
-           STOP RUN.
 
        COPY "ccs.cpy".
+
+       0225-HERO-DETAILS.
+           DISPLAY "|------------------------------------------------|".
+           DISPLAY "|             Your Hero details"
+           DISPLAY "|             Name: " chosen-name.
+           DISPLAY "|             Class: " YOUR-CLASS.
+           DISPLAY "|             Race: " RACE-NAME.
+           DISPLAY "|             Health🍷: " player-health.
+           DISPLAY "|             Mana🔮: " player-mana.
+           DISPLAY "|             Energy⚡: " player-energy.
+           DISPLAY "|------------------------------------------------|".
+
