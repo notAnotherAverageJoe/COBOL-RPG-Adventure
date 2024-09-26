@@ -50,3 +50,17 @@
            ELSE
                DISPLAY "Please pick a valid race."
            END-IF.
+
+       0300-QUEST-READY.
+           DISPLAY "Are you ready to go on a quest? ".
+           DISPLAY "Type 'Y' or 'N' ".
+           ACCEPT choice1.
+           IF choice1 = "Y" or "y"
+               PERFORM 0301-FIRST-QUEST
+           ELSE 
+               CONTINUE 
+           END-IF.
+       
+       
+       0301-FIRST-QUEST.
+           DISPLAY "You embark on your very first journey!".

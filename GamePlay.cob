@@ -16,6 +16,7 @@
 
        01  RACE-NAME  PIC X(15).
        01  YOUR-CLASS PIC X(15).
+       01  choice1 PIC X(1).
 
        PROCEDURE DIVISION.
 
@@ -31,6 +32,7 @@
                PERFORM 0175-PICK-FANTASY-RACE
                PERFORM 0200-RESPONSES
                PERFORM 0225-HERO-DETAILS
+               PERFORM 0300-QUEST-READY
                DISPLAY "Would you like to end? (Y/N) "
                ACCEPT END-SWITCH
            END-PERFORM.
@@ -47,4 +49,7 @@
            DISPLAY "|             Mana🔮: " player-mana.
            DISPLAY "|             Energy⚡: " player-energy.
            DISPLAY "|------------------------------------------------|".
+       
+       0700-COMBAT.
 
+           
