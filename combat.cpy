@@ -1,5 +1,5 @@
        0700-WARRIOR-COMBAT.
-           DISPLAY "You quickly unsheath your sword and prepare".
+           DISPLAY "You quickly unsheath your weapon and prepare".
            DISPLAY "for battle!⚔️".
            DISPLAY "You let out a bloodcurdling howl and attack.🪓".
 
@@ -8,7 +8,7 @@
                DISPLAY "You have won this fight!"
                SUBTRACT 20 FROM player-energy
                SUBTRACT 20 FROM player-health
-               DISPLAY "Of course, you did not escape unscathed.".
+               DISPLAY "Of course, you did not escape unscathed."
            ELSE
                DISPLAY "GAME OVER!"
                STOP RUN

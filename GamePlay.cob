@@ -33,7 +33,7 @@
                PERFORM 0200-RESPONSES
                PERFORM 0225-HERO-DETAILS
                PERFORM 0300-QUEST-READY
-               PERFORM 0700-WARRIOR-COMBAT
+               PERFORM 0280-CLASS-COMBAT
                PERFORM 0225-HERO-DETAILS
                DISPLAY "Would you like to end? (Y/N) "
                ACCEPT END-SWITCH

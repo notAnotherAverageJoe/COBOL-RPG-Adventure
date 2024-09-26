@@ -25,21 +25,21 @@
            ACCEPT chosen-race.
            EVALUATE chosen-race
                WHEN 1
-                   MOVE "Orc" TO RACE-NAME
+                   MOVE "Orc 👹" TO RACE-NAME
                WHEN 2
-                   MOVE "Dwarf" TO RACE-NAME
+                   MOVE "Dwarf 🧙‍♂️" TO RACE-NAME
                WHEN 3
-                   MOVE "High-Elf" TO RACE-NAME
+                   MOVE "High-Elf 🧝‍♀️" TO RACE-NAME
                WHEN 4
-                   MOVE "Wood-Elf" TO RACE-NAME
+                   MOVE "Wood-Elf 🧝" TO RACE-NAME
                WHEN 5
-                   MOVE "Dark-Elf" TO RACE-NAME
+                   MOVE "Dark-Elf 🧝‍♀️" TO RACE-NAME
                WHEN 6
-                   MOVE "Troll" TO RACE-NAME
+                   MOVE "Troll 🧟‍♂️" TO RACE-NAME
                WHEN 7
-                   MOVE "Human" TO RACE-NAME
+                   MOVE "Human 🧑‍🔧" TO RACE-NAME
                WHEN 8
-                   MOVE "Gnome" TO RACE-NAME
+                   MOVE "Gnome 🛠️" TO RACE-NAME
                WHEN OTHER
                    DISPLAY "Invalid selection, please try again."
            END-EVALUATE.
@@ -50,6 +50,22 @@
            ELSE
                DISPLAY "Please pick a valid race."
            END-IF.
+
+
+       0280-CLASS-COMBAT.
+           EVALUATE chosen-class
+               WHEN 1
+                   PERFORM 0700-WARRIOR-COMBAT
+               WHEN 2
+                   PERFORM 0705-ROGUE-COMBAT
+               WHEN 3
+                   PERFORM 0710-MAGE-COMBAT
+               WHEN OTHER 
+                   DISPLAY "Invalid selection, please try again."
+           END-EVALUATE.
+
+
+
 
        0300-QUEST-READY.
            DISPLAY "Are you ready to go on a quest? ".
@@ -83,5 +99,8 @@
        0303-NO-CAVE.
            DISPLAY "Well, since the cave seems too scary and dark.😱.".
            DISPLAY "You decide to keep walking.".
+           DISPLAY "You hear something in the bushes 🌳 up ahead...".
+           DISPLAY "It is too late to turn back now " chosen-name".".
+           DISPLAY "LOOOK OUT!".
 
 
