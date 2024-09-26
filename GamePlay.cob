@@ -33,11 +33,14 @@
                PERFORM 0200-RESPONSES
                PERFORM 0225-HERO-DETAILS
                PERFORM 0300-QUEST-READY
+               PERFORM 0700-WARRIOR-COMBAT
+               PERFORM 0225-HERO-DETAILS
                DISPLAY "Would you like to end? (Y/N) "
                ACCEPT END-SWITCH
            END-PERFORM.
 
        COPY "ccs.cpy".
+       COPY "combat.cpy".
 
        0225-HERO-DETAILS.
            DISPLAY "|------------------------------------------------|".
@@ -50,6 +53,6 @@
            DISPLAY "|             Energy⚡: " player-energy.
            DISPLAY "|------------------------------------------------|".
        
-       0700-COMBAT.
+       
 
            

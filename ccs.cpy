@@ -61,6 +61,27 @@
                CONTINUE 
            END-IF.
        
-       
-       0301-FIRST-QUEST.
+              0301-FIRST-QUEST.
            DISPLAY "You embark on your very first journey!".
+           DISPLAY "you have stumbled upon a cave 🕳️🪨".
+           DISPLAY "Being an adventurer I am sure you can handle it.".
+           DISPLAY "Will you enter the cave? (Y/N)".
+           ACCEPT choice1.
+
+           IF choice1 = "Y" OR choice1 = "y"
+               PERFORM 0302-SPIDER-AMBUSH
+           ELSE
+               DISPLAY "Really??...alright then...let's see here..."
+               PERFORM 0303-NO-CAVE
+           END-IF.
+
+       0302-SPIDER-AMBUSH.
+           DISPLAY "You are almost instantly ambushed by cave spiders!".
+           DISPLAY " 🕷️              🕷️             🕷️".
+           DISPLAY "Prepare for battle, " chosen-name "!".
+
+       0303-NO-CAVE.
+           DISPLAY "Well, since the cave seems too scary and dark.😱.".
+           DISPLAY "You decide to keep walking.".
+
+
