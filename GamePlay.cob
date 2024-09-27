@@ -29,12 +29,21 @@
                PERFORM 0100-NAME-CLASS
                PERFORM 0150-PICK-CLASSES
                DISPLAY "Always nice to have a " YOUR-CLASS
+               PERFORM 0201-SPACED
                PERFORM 0175-PICK-FANTASY-RACE
                PERFORM 0200-RESPONSES
+               PERFORM 0201-SPACED
                PERFORM 0225-HERO-DETAILS
+               PERFORM 0201-SPACED
                PERFORM 0300-QUEST-READY
+               PERFORM 0201-SPACED
+
                PERFORM 0280-CLASS-COMBAT
+               PERFORM 0201-SPACED
+
                PERFORM 0225-HERO-DETAILS
+               PERFORM 0201-SPACED
+
                DISPLAY "Would you like to end? (Y/N) "
                ACCEPT END-SWITCH
            END-PERFORM.

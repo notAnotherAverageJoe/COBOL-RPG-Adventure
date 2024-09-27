@@ -50,6 +50,14 @@
            ELSE
                DISPLAY "Please pick a valid race."
            END-IF.
+           
+       0201-SPACED.
+           DISPLAY "                                                  ".
+           DISPLAY "{}=============================================={}".
+           DISPLAY "                                                  ".
+
+
+
 
 
        0280-CLASS-COMBAT.
