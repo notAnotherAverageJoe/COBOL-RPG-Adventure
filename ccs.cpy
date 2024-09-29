@@ -55,7 +55,11 @@
            DISPLAY "                                                  ".
            DISPLAY "{}=============================================={}".
            DISPLAY "                                                  ".
-
+       0202-AVERAGE-SPACE.
+           DISPLAY "                                                  ".
+           DISPLAY "--------------------------------------------------".
+           DISPLAY "                                                  ".
+           
 
 
 
@@ -76,7 +80,7 @@
 
 
        0300-QUEST-READY.
-           DISPLAY "Are you ready to go on a quest? ".
+           DISPLAY "Are you ready to go on an adventure? ".
            DISPLAY "Type 'Y' or 'N' ".
            ACCEPT choice1.
            IF choice1 = "Y" or "y"
@@ -103,6 +107,10 @@
            DISPLAY "You are almost instantly ambushed by cave spiders!".
            DISPLAY " 🕷️              🕷️             🕷️".
            DISPLAY "Prepare for battle, " chosen-name "!".
+           PERFORM 0202-AVERAGE-SPACE.
+           PERFORM 0280-CLASS-COMBAT.
+           PERFORM 0202-AVERAGE-SPACE.
+           PERFORM 0304-FIRST-QUEST-CONT-TWO.
 
        0303-NO-CAVE.
            DISPLAY "Well, since the cave seems too scary and dark.😱.".
@@ -110,5 +118,38 @@
            DISPLAY "You hear something in the bushes 🌳 up ahead...".
            DISPLAY "It is too late to turn back now " chosen-name".".
            DISPLAY "LOOOK OUT!".
+           PERFORM 0202-AVERAGE-SPACE.
+           PERFORM 0280-CLASS-COMBAT.
+           PERFORM 0202-AVERAGE-SPACE.
+
+
+
+       0304-FIRST-QUEST-CONT-TWO.
+           DISPLAY "Well fought " chosen-name "!"
+           DISPLAY "Once you have collected the valuable monster parts".
+           DISPLAY "You take a moment to breathe in that dank cave air".
+           DISPLAY "Yuck...but the journey can't end here!".
+           DISPLAY "Are you ready to keep moving?".
+           DISPLAY "I wouldn't stay here....(Y / N )".
+         
+           ACCEPT choice1.
+           IF choice1 = 'Y' OR 'y'
+               CONTINUE 
+           ELSE 
+               DISPLAY "Take another moment if you must...but hurry."
+           END-IF.
+        
+           DISPLAY "As you travel through the cave you can hear the".
+           DISPLAY "Skittering of all the spider inhabitants around".
+           DISPLAY "Is that your skin crawling?...or spiders..".
+           DISPLAY "UH OH...it's another ambush!!"
+           PERFORM 0202-AVERAGE-SPACE.
+           PERFORM 0280-CLASS-COMBAT.
+           PERFORM 0202-AVERAGE-SPACE.
+
+
+
+
+       
 
 

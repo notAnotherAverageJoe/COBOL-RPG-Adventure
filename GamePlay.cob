@@ -37,10 +37,6 @@
                PERFORM 0201-SPACED
                PERFORM 0300-QUEST-READY
                PERFORM 0201-SPACED
-
-               PERFORM 0280-CLASS-COMBAT
-               PERFORM 0201-SPACED
-
                PERFORM 0225-HERO-DETAILS
                PERFORM 0201-SPACED
 
