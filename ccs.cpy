@@ -122,6 +122,19 @@
            PERFORM 0280-CLASS-COMBAT.
            PERFORM 0202-AVERAGE-SPACE.
 
+       0305-NO-CAVE-CONT-TWO.
+           DISPLAY "Yikes...rough start..".
+           DISPLAY "Maybe next time you should go into the cave??".
+           DISPLAY "Are you ready to continue? ( Y / N )"
+           ACCEPT choice1.
+           IF choice1 = 'Y' OR 'y'
+               CONTINUE 
+           ELSE 
+               DISPLAY "Take another moment if you must...but hurry."
+           END-IF.
+        
+      *Continue adding quest logic here
+
 
 
        0304-FIRST-QUEST-CONT-TWO.
